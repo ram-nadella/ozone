@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2119155A156AE866001F44F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21191559156AE866001F44F0 /* Cocoa.framework */; };
+		21191564156AE866001F44F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21191562156AE866001F44F0 /* InfoPlist.strings */; };
+		21191566156AE866001F44F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21191565156AE866001F44F0 /* main.m */; };
+		2119156A156AE866001F44F0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 21191568156AE866001F44F0 /* Credits.rtf */; };
+		2119156D156AE866001F44F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2119156C156AE866001F44F0 /* AppDelegate.m */; };
+		21191570156AE867001F44F0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2119156E156AE867001F44F0 /* MainMenu.xib */; };
+		2119B83A1570D36200106C04 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2119B8391570D36200106C04 /* Sparkle.framework */; };
+		2119B83D1570D93700106C04 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2119B8391570D36200106C04 /* Sparkle.framework */; };
+		21868DE21575D3E6009EEAF1 /* ozone_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 21868DE11575D3E6009EEAF1 /* ozone_icon.icns */; };
+		21868DF21575DDE2009EEAF1 /* lab.png in Resources */ = {isa = PBXBuildFile; fileRef = 21868DF11575DDE2009EEAF1 /* lab.png */; };
+		2186BAE515719D6100CA8B84 /* ozone_dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2186BAE415719D6100CA8B84 /* ozone_dsa_pub.pem */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2119B83C1570D90E00106C04 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2119B83D1570D93700106C04 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		21191555156AE866001F44F0 /* Ozone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ozone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21191559156AE866001F44F0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2119155C156AE866001F44F0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2119155D156AE866001F44F0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2119155E156AE866001F44F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		21191561156AE866001F44F0 /* Ozone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ozone-Info.plist"; sourceTree = "<group>"; };
+		21191563156AE866001F44F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		21191565156AE866001F44F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21191567156AE866001F44F0 /* Ozone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ozone-Prefix.pch"; sourceTree = "<group>"; };
+		21191569156AE866001F44F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2119156B156AE866001F44F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2119156C156AE866001F44F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2119156F156AE867001F44F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2119B8391570D36200106C04 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		21868DE11575D3E6009EEAF1 /* ozone_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ozone_icon.icns; sourceTree = "<group>"; };
+		21868DF11575DDE2009EEAF1 /* lab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lab.png; sourceTree = "<group>"; };
+		2186BAE015718B7700CA8B84 /* Ozone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ozone.entitlements; sourceTree = "<group>"; };
+		2186BAE415719D6100CA8B84 /* ozone_dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ozone_dsa_pub.pem; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21191552156AE866001F44F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2119155A156AE866001F44F0 /* Cocoa.framework in Frameworks */,
+				2119B83A1570D36200106C04 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2119154A156AE866001F44F0 = {
+			isa = PBXGroup;
+			children = (
+				2119155F156AE866001F44F0 /* Ozone */,
+				21191558156AE866001F44F0 /* Frameworks */,
+				21191556156AE866001F44F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21191556156AE866001F44F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21191555156AE866001F44F0 /* Ozone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21191558156AE866001F44F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2119B8391570D36200106C04 /* Sparkle.framework */,
+				21191559156AE866001F44F0 /* Cocoa.framework */,
+				2119155B156AE866001F44F0 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2119155B156AE866001F44F0 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2119155C156AE866001F44F0 /* AppKit.framework */,
+				2119155D156AE866001F44F0 /* CoreData.framework */,
+				2119155E156AE866001F44F0 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2119155F156AE866001F44F0 /* Ozone */ = {
+			isa = PBXGroup;
+			children = (
+				2186BAE015718B7700CA8B84 /* Ozone.entitlements */,
+				2119156B156AE866001F44F0 /* AppDelegate.h */,
+				2119156C156AE866001F44F0 /* AppDelegate.m */,
+				2119156E156AE867001F44F0 /* MainMenu.xib */,
+				21191560156AE866001F44F0 /* Supporting Files */,
+			);
+			path = Ozone;
+			sourceTree = "<group>";
+		};
+		21191560156AE866001F44F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21868DF11575DDE2009EEAF1 /* lab.png */,
+				21868DE11575D3E6009EEAF1 /* ozone_icon.icns */,
+				2186BAE415719D6100CA8B84 /* ozone_dsa_pub.pem */,
+				21191561156AE866001F44F0 /* Ozone-Info.plist */,
+				21191562156AE866001F44F0 /* InfoPlist.strings */,
+				21191565156AE866001F44F0 /* main.m */,
+				21191567156AE866001F44F0 /* Ozone-Prefix.pch */,
+				21191568156AE866001F44F0 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21191554156AE866001F44F0 /* Ozone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21191573156AE867001F44F0 /* Build configuration list for PBXNativeTarget "Ozone" */;
+			buildPhases = (
+				21191551156AE866001F44F0 /* Sources */,
+				21191552156AE866001F44F0 /* Frameworks */,
+				21191553156AE866001F44F0 /* Resources */,
+				2119B83C1570D90E00106C04 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ozone;
+			productName = Ozone;
+			productReference = 21191555156AE866001F44F0 /* Ozone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2119154C156AE866001F44F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2119154F156AE866001F44F0 /* Build configuration list for PBXProject "Ozone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2119154A156AE866001F44F0;
+			productRefGroup = 21191556156AE866001F44F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21191554156AE866001F44F0 /* Ozone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21191553156AE866001F44F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21191564156AE866001F44F0 /* InfoPlist.strings in Resources */,
+				2119156A156AE866001F44F0 /* Credits.rtf in Resources */,
+				21191570156AE867001F44F0 /* MainMenu.xib in Resources */,
+				2186BAE515719D6100CA8B84 /* ozone_dsa_pub.pem in Resources */,
+				21868DE21575D3E6009EEAF1 /* ozone_icon.icns in Resources */,
+				21868DF21575DDE2009EEAF1 /* lab.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21191551156AE866001F44F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21191566156AE866001F44F0 /* main.m in Sources */,
+				2119156D156AE866001F44F0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		21191562156AE866001F44F0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21191563156AE866001F44F0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		21191568156AE866001F44F0 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21191569156AE866001F44F0 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2119156E156AE867001F44F0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2119156F156AE867001F44F0 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21191571156AE867001F44F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		21191572156AE867001F44F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+		21191574156AE867001F44F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Ozone/Ozone.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ozone/Ozone-Prefix.pch";
+				INFOPLIST_FILE = "Ozone/Ozone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		21191575156AE867001F44F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Ozone/Ozone.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ozone/Ozone-Prefix.pch";
+				INFOPLIST_FILE = "Ozone/Ozone-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2119154F156AE866001F44F0 /* Build configuration list for PBXProject "Ozone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21191571156AE867001F44F0 /* Debug */,
+				21191572156AE867001F44F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21191573156AE867001F44F0 /* Build configuration list for PBXNativeTarget "Ozone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21191574156AE867001F44F0 /* Debug */,
+				21191575156AE867001F44F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2119154C156AE866001F44F0 /* Project object */;
+}
