@@ -114,13 +114,17 @@
     }
 
     // get dig output (with no args)
-    arguments = [NSArray arrayWithObjects: @"8.8.8.8", nil];
+    arguments = [NSArray arrayWithObjects: @"@8.8.8.8", domain, nil];
     NSString *digResponse = [self createTask:@"/usr/bin/dig" withArgs:arguments];
     [digOutput setString:digResponse];
     NSRange answerSectionRange = [digResponse rangeOfString:@";; ANSWER SECTION:"];
     if (answerSectionRange.location != NSNotFound) {
         [digOutput setSelectedRange:answerSectionRange];
     }
+}
+
+- (IBAction)replaceDomainInput:(id)sender withDomain:(NSString*)domainName {
+    [domainInput setStringValue:domainName];
 }
 
 - (IBAction)clearOuputs:(id)sender {

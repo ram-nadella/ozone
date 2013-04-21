@@ -10,6 +10,7 @@
 // http://stackoverflow.com/questions/5663887/drag-and-drop-with-nsstatusitem/6493240#6493240
 
 #import "DragStatusView.h"
+#import "AppDelegate.h"
 
 @implementation DragStatusView
 
@@ -65,7 +66,11 @@
 
     if ( [[pboard types] containsObject:NSStringPboardType] ) {
         NSString *input = [pboard propertyListForType:NSStringPboardType];
-        NSLog(@"dragged - %@ %@", input, [input className]);
+        NSLog(@"Dragged - %@ %@", input, [input className]);
+        AppDelegate *appDelegate = [NSApp delegate];
+        [appDelegate showWindow:self];
+        [appDelegate replaceDomainInput:self withDomain:input];
+        [appDelegate fetchData:self forDomain:input];
     }
 
     return YES;    

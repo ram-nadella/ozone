@@ -25,6 +25,8 @@
 
 @property (assign) IBOutlet NSWindow *window;
 - (IBAction) performDomainIntrospection:(id) sender;
-- (IBAction) showWindow:(id) sender;
+- (IBAction) fetchData:(id) sender forDomain:(NSString*) domain;
+- (IBAction) replaceDomainInput:(id)sender withDomain:(NSString*)domainName;
 - (IBAction) clearOuputs:(id) sender;
+- (IBAction) showWindow:(id) sender;
 @end
