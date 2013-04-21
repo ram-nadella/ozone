@@ -16,8 +16,14 @@
     // set the menubar icon
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     [statusItem setHighlightMode:YES];
-    [statusItem setImage:[NSImage imageNamed:@"lab"]];
+//    [statusItem setImage:[NSImage imageNamed:@"lab"]];
     [statusItem setMenu:statusMenu];
+    
+    dragView = [[DragStatusView alloc] initWithFrame:NSMakeRect(0, 0, 24, 24)];
+
+    [statusItem setView:dragView];
+    [statusItem setMenu:statusMenu];
+
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -30,6 +36,15 @@
     [headersOutput setFont:fixedFont];
     [nameserverOutput setFont:fixedFont];
 }
+
+/**
+ 
+ Currently blocks UI while waiting to read the output of executed command
+ 
+ See http://stackoverflow.com/questions/7676508/nstask-blocking-the-main-thread?rq=1
+ to change this to run on a background thread instead of the main thread
+ 
+ */
 
 - (NSString *)createTask:(NSString *)taskPath withArgs:(NSArray *)arguments {
 
@@ -58,6 +73,13 @@
     return commandOutput;
 }
 
+- (NSOperation*)taskWithData:(id)data {
+    NSInvocationOperation* theOp = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                        selector:@selector(myTaskMethod:) object:data];
+    
+    return theOp;
+}
+
 - (IBAction)digDomain:(id)sender {
     
     // get the domain input
@@ -73,7 +95,7 @@
     
     // get server header
 
-    arguments = [NSArray arrayWithObjects: @"-X", @"GET", @"-I", domain, nil];
+    arguments = [NSArray arrayWithObjects: @"-X", @"GET", @"-I", @"--max-time", @"30", @"-s", domain, nil];
     NSString *headers = [self createTask:@"/usr/bin/curl" withArgs:arguments];
     [headersOutput setString:headers];
     NSRange serverHeaderRange = [headers rangeOfString:@"Server: cloudflare-nginx"];
@@ -82,7 +104,7 @@
     }
     
     NSTask *task;
-    task = [[NSTask alloc]init];
+    task = [[NSTask alloc] init];
     [task setLaunchPath: @"/usr/bin/dig"];
     
 //    NSArray *arguments;

@@ -18,6 +18,7 @@
 		21868DE21575D3E6009EEAF1 /* ozone_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 21868DE11575D3E6009EEAF1 /* ozone_icon.icns */; };
 		21868DF21575DDE2009EEAF1 /* lab.png in Resources */ = {isa = PBXBuildFile; fileRef = 21868DF11575DDE2009EEAF1 /* lab.png */; };
 		2186BAE515719D6100CA8B84 /* ozone_dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2186BAE415719D6100CA8B84 /* ozone_dsa_pub.pem */; };
+		21DBF8D516AA3D9F0021E86E /* DragStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DBF8D416AA3D9F0021E86E /* DragStatusView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		21868DF11575DDE2009EEAF1 /* lab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lab.png; sourceTree = "<group>"; };
 		2186BAE015718B7700CA8B84 /* Ozone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ozone.entitlements; sourceTree = "<group>"; };
 		2186BAE415719D6100CA8B84 /* ozone_dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ozone_dsa_pub.pem; sourceTree = "<group>"; };
+		21DBF8D316AA3D9F0021E86E /* DragStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragStatusView.h; sourceTree = "<group>"; };
+		21DBF8D416AA3D9F0021E86E /* DragStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragStatusView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				2119156C156AE866001F44F0 /* AppDelegate.m */,
 				2119156E156AE867001F44F0 /* MainMenu.xib */,
 				21191560156AE866001F44F0 /* Supporting Files */,
+				21DBF8D316AA3D9F0021E86E /* DragStatusView.h */,
+				21DBF8D416AA3D9F0021E86E /* DragStatusView.m */,
 			);
 			path = Ozone;
 			sourceTree = "<group>";
@@ -158,7 +163,7 @@
 		2119154C156AE866001F44F0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 2119154F156AE866001F44F0 /* Build configuration list for PBXProject "Ozone" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -200,6 +205,7 @@
 			files = (
 				21191566156AE866001F44F0 /* main.m in Sources */,
 				2119156D156AE866001F44F0 /* AppDelegate.m in Sources */,
+				21DBF8D516AA3D9F0021E86E /* DragStatusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +245,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -253,6 +263,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
@@ -266,6 +277,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -274,6 +289,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx10.7;
@@ -284,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Ozone/Ozone.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -301,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Ozone/Ozone.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

@@ -7,8 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DragStatusView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate>
+{
     IBOutlet NSButton *digButton;
     IBOutlet NSTextField *domainInput;
     IBOutlet NSTextView *outputArea;
@@ -17,6 +19,8 @@
 
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
+    
+    DragStatusView *dragView;
 }
 
 @property (assign) IBOutlet NSWindow *window;
