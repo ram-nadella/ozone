@@ -13,7 +13,7 @@
 {
     IBOutlet NSButton *digButton;
     IBOutlet NSTextField *domainInput;
-    IBOutlet NSTextView *outputArea;
+    IBOutlet NSTextView *digOutput;
     IBOutlet NSTextView *headersOutput;
     IBOutlet NSTextView *nameserverOutput;
 
@@ -24,6 +24,7 @@
 }
 
 @property (assign) IBOutlet NSWindow *window;
-- (IBAction) digDomain:(id) sender;
+- (IBAction) performDomainIntrospection:(id) sender;
 - (IBAction) showWindow:(id) sender;
+- (IBAction) clearOuputs:(id) sender;
 @end

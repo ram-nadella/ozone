@@ -29,10 +29,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+
+//    [_window setBackgroundColor:[NSColor whiteColor]];
+
     [domainInput heightAdjustLimit];
     
     NSFont *fixedFont = [NSFont fontWithName:@"Menlo" size:13]; 
-    [outputArea setFont:fixedFont];
+    [digOutput setFont:fixedFont];
     [headersOutput setFont:fixedFont];
     [nameserverOutput setFont:fixedFont];
 }
@@ -80,21 +83,28 @@
     return theOp;
 }
 
-- (IBAction)digDomain:(id)sender {
+// instrospection time :)
+- (IBAction)performDomainIntrospection:(id)sender {
+    NSString *domainName = [domainInput stringValue];
+    [self fetchData:sender forDomain:domainName];
+}
+
+// duplicate of above digDomain function but takes domain as input param
+
+- (IBAction)fetchData:(id)sender forDomain:(NSString*)domain {
+
+    // clear the ouputs from previous run
+    [self clearOuputs:sender];
     
-    // get the domain input
-    
-    NSString *domain = [domainInput stringValue];
+    // argument list for commands, reused (repopulated)
+    NSArray *arguments;
     
     // get name servers
-    
-    NSArray *arguments;
     arguments = [NSArray arrayWithObjects: @"+short", @"NS", domain, nil];
     NSString *nameservers = [self createTask:@"/usr/bin/dig" withArgs:arguments];
     [nameserverOutput setString:nameservers];
     
     // get server header
-
     arguments = [NSArray arrayWithObjects: @"-X", @"GET", @"-I", @"--max-time", @"30", @"-s", domain, nil];
     NSString *headers = [self createTask:@"/usr/bin/curl" withArgs:arguments];
     [headersOutput setString:headers];
@@ -102,38 +112,21 @@
     if (serverHeaderRange.location != NSNotFound) {
         [headersOutput setSelectedRange:serverHeaderRange];
     }
-    
-    NSTask *task;
-    task = [[NSTask alloc] init];
-    [task setLaunchPath: @"/usr/bin/dig"];
-    
-//    NSArray *arguments;
-    arguments = [NSArray arrayWithObjects: domain, nil];
-    [task setArguments: arguments];
-    
-    NSPipe *pipe;
-    pipe = [NSPipe pipe];
-    [task setStandardOutput: pipe];
-    
-    NSFileHandle *file;
-    file = [pipe fileHandleForReading];
-    
-    [task launch];
-    
-    NSData *data;
-    data = [file readDataToEndOfFile];
-    
-    NSString *commandOutput;
-    commandOutput = [[NSString alloc] initWithData: data
-                                          encoding: NSUTF8StringEncoding];
-    //    NSLog (@"Dig response: \n%@", string);
-    
-    [outputArea setString:commandOutput];
-    NSRange answerSectionRange = [commandOutput rangeOfString:@";; ANSWER SECTION:"];
-    if (answerSectionRange.location != NSNotFound) {
-        [outputArea setSelectedRange:answerSectionRange];
-    }
 
+    // get dig output (with no args)
+    arguments = [NSArray arrayWithObjects: @"8.8.8.8", nil];
+    NSString *digResponse = [self createTask:@"/usr/bin/dig" withArgs:arguments];
+    [digOutput setString:digResponse];
+    NSRange answerSectionRange = [digResponse rangeOfString:@";; ANSWER SECTION:"];
+    if (answerSectionRange.location != NSNotFound) {
+        [digOutput setSelectedRange:answerSectionRange];
+    }
+}
+
+- (IBAction)clearOuputs:(id)sender {
+    [nameserverOutput setString:@""];
+    [headersOutput setString:@""];
+    [digOutput setString:@""];
 }
 
 - (IBAction)showWindow:(id)sender {
