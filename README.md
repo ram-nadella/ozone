@@ -12,5 +12,3 @@ Allows drag and drop of the domain text on to the menu bar icon
 ### Screenshot
 
 ![Ozone.app screenshot](https://raw.github.com/ram-nadella/ozone/master/misc/Ozone.app.png "Ozone.app")
-
-[]It looks like this -> http://cl.ly/image/0C2k2x240C0S
